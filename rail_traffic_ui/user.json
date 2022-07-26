@@ -1,0 +1,13 @@
+{"code":0,"msg":"","count":1000,"data":[
+    {"no":1,"model":"LBSF150DD-05D15","version":"2C","serial":"SN12652","address":"2","batch":"2011","date":"2021/01/10","currentTime":24,"sumTime":8283,"warn":57},
+    {"no":2,"model":"LBSF150DD-10B25","version":"1A","serial":"SN21348","address":"1","batch":"2011","date":"2021/02/11","currentTime":58,"sumTime":6690,"warn":27},
+    {"no":3,"model":"LBSF500-05A25","version":"2D","serial":"SN18472","address":"4","batch":"1997","date":"2020/02/27","currentTime":77,"sumTime":678,"warn":31},
+    {"no":4,"model":"LBSF350DD-10D35","version":"2C","serial":"SN13215","address":"2","batch":"1985","date":"2021/05/12","currentTime":157,"sumTime":3017,"warn":68},
+    {"no":5,"model":"LBSF350-15D20","version":"3A","serial":"SN24376","address":"3","batch":"1998","date":"2019/08/13","currentTime":51,"sumTime":762,"warn":261},
+    {"no":6,"model":"LBSF150DD-05D15","version":"2C","serial":"SN17765","address":"1","batch":"2004","date":"2021/03/11","currentTime":68,"sumTime":147,"warn":87},
+    {"no":7,"model":"LBSF100D-05D25","version":"1C","serial":"SN18333","address":"5","batch":"2002","date":"2021/04/25","currentTime":37,"sumTime":5766,"warn":343},
+    {"no":8,"model":"LBSF80D-05D15","version":"3B","serial":"SN23734","address":"3","batch":"1999","date":"2020/01/02","currentTime":150,"sumTime":30578,"warn":28},
+    {"no":9,"model":"LBSF100-25D10","version":"2A","serial":"SN29994","address":"2","batch":"1854","date":"2021/08/23","currentTime":133,"sumTime":1671,"warn":145},
+    {"no":10,"model":"LBSF200D-15A10","version":"1B","serial":"SN11896","address":"4","batch":"2000","date":"2020/12/07","currentTime":25,"sumTime":868,"warn":75}
+    ]
+}

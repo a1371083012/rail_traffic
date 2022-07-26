@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>轨交数字化电源监测运营中心</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/iconfont.css" />
+    <link rel="stylesheet" href="./css/cmzInput.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div class="containerMain">
+    <!-- 导航栏 -->
+    <div class="layui-row navigation">
+        <!-- Logo -->
+        <div class="layui-col-xs12 layui-col-sm4 layui-col-md4 logo">
+            <img src="./images/Logo.png" alt="Logo">
+            <div class="time"></div>
+        </div>
+        <!-- 标题 -->
+        <div class="layui-col-xs12 layui-col-sm8 layui-col-md4 title">航天柏克电源监测运营中心</div>
+        <!-- 功能 -->
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md4 item">
+            <div class="nav-button console"><p>控制台</p></div>
+            <div class="nav-button set"><p>设置</p></div>
+            <div class="nav-button logout"><p>退出系统</p></div>
+        </div>
+        <!-- 装饰条 -->
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 hr"><div></div></div>
+    </div>
+    <!-- 上方数据 -->
+    <div class="layui-row top-data">
+        <!-- 列1 -->
+        <div class="layui-col-sm12 layui-col-md4 top-data-front">
+            <div class="layui-row">
+                <div class="layui-fluid top-data-front-box">
+                    <div class="data-show-mainBorder data-show-border">
+                        <div class="data-head">
+                            <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjU1ODEwMDkxMzI1IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjEyMTciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTM1My44MTMzMzMgMzMyLjAzMmwtNDUuMjQ4IDQ1LjI0OEwxNDYuNzUyIDIxNS40NjY2NjdsMTU0LjAyNjY2Ny0xNTQuMDQ4TDM0Ni4wNjkzMzMgMTA2LjY2NjY2NyAyNjguMTYgMTg0LjUzMzMzM2wyNTMuNTQ2NjY3IDAuMDQyNjY3YzE4NS4zNDQgMCAzMzYuMDQyNjY3IDE0OC40MzczMzMgMzM5LjYyNjY2NiAzMzIuOTQ5MzMzbDAuMDg1MzM0IDYuNzYyNjY3YzAgMTg3LjYwNTMzMy0xNTIuMTA2NjY3IDMzOS43MTItMzM5LjcxMiAzMzkuNzEyLTE4Ny42MjY2NjcgMC0zMzkuNzMzMzMzLTE1Mi4xMDY2NjctMzM5LjczMzMzNC0zMzkuNzEyaDY0YzAgMTUyLjI3NzMzMyAxMjMuNDU2IDI3NS43MTIgMjc1LjczMzMzNCAyNzUuNzEyIDE1Mi4yNTYgMCAyNzUuNzEyLTEyMy40MzQ2NjcgMjc1LjcxMi0yNzUuNzEycy0xMjMuNDU2LTI3NS43MTItMjc1LjcxMi0yNzUuNzEybC0yNTEuMzcwNjY3LTAuMDIxMzMzIDgzLjQ3NzMzMyA4My40NzczMzN6IG0xODkuODY2NjY3IDUuNDE4NjY3djE1My44NTZoMTUzLjg1NnY2NS45NDEzMzNINDc3LjczODY2N1YzMzcuNDUwNjY3aDY1LjkyeiIgcC1pZD0iMTIxOCIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg==" alt="">营运时间段统计</p>
+                            <div class="more-button">more+</div>
+                        </div>
+                        <div><hr></div>
+                        <div class="data-body">
+                            <div id="workTimeBar1"></div>
+                            <div id="workTimeBar2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-fluid top-data-front-box">
+                    <div class="data-show-mainBorder data-show-border">
+                        <div class="data-head">
+                            <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjU1ODEwNDMyOTA2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE0NTkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTk0NSA0MTJINjg5Yy00LjQgMC04IDMuNi04IDh2NDhjMCA0LjQgMy42IDggOCA4aDI1NmM0LjQgMCA4LTMuNiA4LTh2LTQ4YzAtNC40LTMuNi04LTgtOHpNODExIDU0OEg2ODljLTQuNCAwLTggMy42LTggOHY0OGMwIDQuNCAzLjYgOCA4IDhoMTIyYzQuNCAwIDgtMy42IDgtOHYtNDhjMC00LjQtMy42LTgtOC04ek00NzcuMyAzMjIuNUg0MzRjLTYuMiAwLTExLjIgNS0xMS4yIDExLjJ2MjQ4YzAgMy42IDEuNyA2LjkgNC42IDlsMTQ4LjkgMTA4LjZjNSAzLjYgMTIgMi42IDE1LjYtMi40bDI1LjctMzUuMXYtMC4xYzMuNi01IDIuNS0xMi0yLjUtMTUuNmwtMTI2LjctOTEuNlYzMzMuN2MwLjEtNi4yLTUtMTEuMi0xMS4xLTExLjJ6IiBwLWlkPSIxNDYwIiBmaWxsPSIjZmZmZmZmIj48L3BhdGg+PHBhdGggZD0iTTgwNC44IDY3My45SDc0N2MtNS42IDAtMTAuOSAyLjktMTMuOSA3LjctMTIuNyAyMC4xLTI3LjUgMzguNy00NC41IDU1LjctMjkuMyAyOS4zLTYzLjQgNTIuMy0xMDEuMyA2OC4zLTM5LjMgMTYuNi04MSAyNS0xMjQgMjUtNDMuMSAwLTg0LjgtOC40LTEyNC0yNS0zNy45LTE2LTcyLTM5LTEwMS4zLTY4LjNzLTUyLjMtNjMuNC02OC4zLTEwMS4zYy0xNi42LTM5LjItMjUtODAuOS0yNS0xMjQgMC00My4xIDguNC04NC43IDI1LTEyNCAxNi0zNy45IDM5LTcyIDY4LjMtMTAxLjMgMjkuMy0yOS4zIDYzLjQtNTIuMyAxMDEuMy02OC4zIDM5LjItMTYuNiA4MS0yNSAxMjQtMjUgNDMuMSAwIDg0LjggOC40IDEyNCAyNSAzNy45IDE2IDcyIDM5IDEwMS4zIDY4LjMgMTcgMTcgMzEuOCAzNS42IDQ0LjUgNTUuNyAzIDQuOCA4LjMgNy43IDEzLjkgNy43aDU3LjhjNi45IDAgMTEuMy03LjIgOC4yLTEzLjMtNjUuMi0xMjkuNy0xOTcuNC0yMTQtMzQ1LTIxNS43LTIxNi4xLTIuNy0zOTUuNiAxNzQuMi0zOTYgMzkwLjFDNzEuNiA3MjcuNSAyNDYuOSA5MDMgNDYzLjIgOTAzYzE0OS41IDAgMjgzLjktODQuNiAzNDkuOC0yMTUuOCAzLjEtNi4xLTEuNC0xMy4zLTguMi0xMy4zeiIgcC1pZD0iMTQ2MSIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg==" alt="">设备历史营运时间统计</p>
+                            <div class="more-button">more+</div>
+                        </div>
+                        <div><hr></div>
+                        <div class="data-body">
+                            <div id="historical"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-fluid top-data-front-box">
+                    <div class="data-show-mainBorder data-show-border">
+                        <div class="data-head">
+                            <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjU1ODEwNjcxNTYwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjMyODAiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTY1MiA2NGMzOS4xODcgMCA3Mi41MjQgMjUuMDQ0IDg0Ljg3OSA2MEg4MDJjNDkuMjA5IDAgODkuMTkzIDM5LjQ5MyA4OS45ODggODguNTEyTDg5MiAyMTR2NjU2YzAgNDkuMjA5LTM5LjQ5MyA4OS4xOTMtODguNTEyIDg5Ljk4OEw4MDIgOTYwSDIyMmMtNDkuMjA5IDAtODkuMTkzLTM5LjQ5My04OS45ODgtODguNTEyTDEzMiA4NzBWMjE0YzAtNDkuMjA5IDM5LjQ5My04OS4xOTMgODguNTEyLTg5Ljk4OEwyMjIgMTI0aDY1LjEyMUMyOTkuNDc2IDg5LjA0NCAzMzIuODEzIDY0IDM3MiA2NHpNMjgyIDE4NGgtNjBjLTE2LjQwMyAwLTI5LjczMSAxMy4xNjQtMjkuOTk2IDI5LjUwNEwxOTIgMjE0djY1NmMwIDE2LjQwMyAxMy4xNjQgMjkuNzMxIDI5LjUwNCAyOS45OTZMMjIyIDkwMGg1ODBjMTYuNDAzIDAgMjkuNzMxLTEzLjE2NCAyOS45OTYtMjkuNTA0TDgzMiA4NzBWMjE0YzAtMTYuNDAzLTEzLjE2NC0yOS43MzEtMjkuNTA0LTI5Ljk5Nkw4MDIgMTg0aC02MHYyMGMwIDIxLjg3LTE3LjU1MiAzOS42NDEtMzkuMzM5IDM5Ljk5NUw3MDIgMjQ0SDMyMmMtMjIuMDkxIDAtNDAtMTcuOTA5LTQwLTQwdi0yMHogbTIzMCAxNDZjMTM1LjMxIDAgMjQ1IDEwOS42OSAyNDUgMjQ1UzY0Ny4zMSA4MjAgNTEyIDgyMCAyNjcgNzEwLjMxIDI2NyA1NzVzMTA5LjY5LTI0NSAyNDUtMjQ1eiBtMCA2MGMtMTAyLjE3MyAwLTE4NSA4Mi44MjctMTg1IDE4NXM4Mi44MjcgMTg1IDE4NSAxODUgMTg1LTgyLjgyNyAxODUtMTg1LTgyLjgyNy0xODUtMTg1LTE4NXogbTAgMjYyYzE2LjU2OSAwIDMwIDEzLjQzMSAzMCAzMCAwIDE2LjU2OS0xMy40MzEgMzAtMzAgMzAtMTYuNTY5IDAtMzAtMTMuNDMxLTMwLTMwIDAtMTYuNTY5IDEzLjQzMS0zMCAzMC0zMHogbTAtMjIyYzE2LjU2OSAwIDMwIDEzLjQzMSAzMCAzMHYxNDJjMCAxNi41NjktMTMuNDMxIDMwLTMwIDMwLTE2LjU2OSAwLTMwLTEzLjQzMS0zMC0zMFY0NjBjMC0xNi41NjkgMTMuNDMxLTMwIDMwLTMweiBtMTQwLTMwNkgzNzJjLTE2LjU2OSAwLTMwIDEzLjQzMS0zMCAzMHYzMGgzNDB2LTMwYzAtMTYuNDAzLTEzLjE2NC0yOS43MzEtMjkuNTA0LTI5Ljk5Nkw2NTIgMTI0eiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iMzI4MSI+PC9wYXRoPjwvc3ZnPg==" alt="">当日设备故障检测统计</p>
+                            <div class="more-button" id="deviceButton">more+</div>
+                        </div>
+                        <div><hr></div>
+                        <div class="data-body">
+                            <div id="devicePie"></div>
+                            <div id="deviceDescribe">
+                                <div class="deviceStatus"></div>
+                                <hr>
+                                <div class="alarmType"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 列2 -->
+        <div class="layui-col-sm12 layui-col-md4 top-data-middle">
+            <div class="layui-row top-data-middle-box">
+                <div class="data-show-mainBorder data-show-border map-show-border">
+                    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
+                        <div class="map-title">全国营运位置分布图</div>
+                        <div class="map-body" id="chart_map">
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 map-body-data">
+                        <div class="map-data">
+                            <div class="map-data-state">在线数量/装机数量</div>
+                            <div class="map-data-num">23545/65210</div>
+                            <img src="./images/1.svg" alt="">
+                        </div>
+                        <div class="map-data">
+                            <div class="map-data-state">故障率（PPM）</div>
+                            <div class="map-data-num">93.6</div>
+                            <img src="./images/1.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 列3 -->
+        <div class="layui-col-sm12 layui-col-md4 top-data-behind">
+            <div class="layui-row">
+                <div class="layui-fluid top-data-front-box">
+                    <div class="data-show-mainBorder data-show-border">
+                        <div class="data-head">
+                            <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjU1ODEwODY1OTk3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQzMzkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTQ4NCAxNzZoNTZ2NTZoLTU2ek03MjkuODAyIDI1NC42MDdsMzkuNTk3IDM5LjU5Ny0zOS41OTcgMzkuNTk4LTM5LjU5OC0zOS41OTh6TTg0OCA0ODR2NTZoLTU2di01NnpNMzMzLjgyOCAyOTQuMjExbC0zOS41OTcgMzkuNTk4LTM5LjU5OC0zOS41OTggMzkuNTk4LTM5LjU5N3pNMjMyIDQ4NHY1NmgtNTZ2LTU2ek01MTIgNTk2Yy01LjQgMC0xMC44LTEuNS0xNS41LTQuNy0xMi45LTguNi0xNi40LTI2LTcuOC0zOC44bDExMi0xNjhjOC42LTEyLjkgMjYuMS0xNi4yIDM4LjgtNy44IDEyLjkgOC42IDE2LjQgMjYgNy44IDM4LjhsLTExMiAxNjhDNTI5LjkgNTkxLjYgNTIxIDU5NiA1MTIgNTk2eiIgcC1pZD0iNDM0MCIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGQ9Ik01MTIgMTIwYzIxNi4xIDAgMzkyIDE3NS45IDM5MiAzOTJTNzI4LjEgOTA0IDUxMiA5MDQgMTIwIDcyOC4xIDEyMCA1MTJzMTc1LjktMzkyIDM5Mi0zOTJtMC01NkMyNjQuNiA2NCA2NCAyNjQuNiA2NCA1MTJzMjAwLjYgNDQ4IDQ0OCA0NDggNDQ4LTIwMC42IDQ0OC00NDhTNzU5LjQgNjQgNTEyIDY0eiIgcC1pZD0iNDM0MSIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg==" alt="">输入/输出电压监测</p>
+                            <div id="voltageSelect" class="inputSelect"></div>
+                        </div>
+                        <div><hr></div>
+                        <div class="data-body">
+                            <div id="voltage"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-fluid top-data-front-box">
+                    <div class="data-show-mainBorder data-show-border">
+                        <div class="data-head">
+                            <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjU1ODEwOTk3MTY3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjgyOTAiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTM4My4wNDQyNjcgMjY5LjI3Nzg2N20zMC4zNDQ1MzMgMGw2MC42NzIgMHEzMC4zNDQ1MzMgMCAzMC4zNDQ1MzMgMzAuMzQ0NTMzbDAgMHEwIDMwLjM0NDUzMy0zMC4zNDQ1MzMgMzAuMzQ0NTMzbC02MC42NzIgMHEtMzAuMzQ0NTMzIDAtMzAuMzQ0NTMzLTMwLjM0NDUzM2wwIDBxMC0zMC4zNDQ1MzMgMzAuMzQ0NTMzLTMwLjM0NDUzM1oiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjgyOTEiPjwvcGF0aD48cGF0aCBkPSJNMzgzLjA0NDI2NyA0MDUuODExMm0zMC4zNDQ1MzMgMGw2MC42NzIgMHEzMC4zNDQ1MzMgMCAzMC4zNDQ1MzMgMzAuMzQ0NTMzbDAgMHEwIDMwLjM0NDUzMy0zMC4zNDQ1MzMgMzAuMzQ0NTM0bC02MC42NzIgMHEtMzAuMzQ0NTMzIDAtMzAuMzQ0NTMzLTMwLjM0NDUzNGwwIDBxMC0zMC4zNDQ1MzMgMzAuMzQ0NTMzLTMwLjM0NDUzM1oiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjgyOTIiPjwvcGF0aD48cGF0aCBkPSJNNTA3LjU2MjY2NyA2OC4zMzQ5MzNhMTQ3LjkxNjggMTQ3LjkxNjggMCAwIDAtMTQzLjQ3OTQ2NyAxNDcuODQ4NTM0djMxMi45NTE0NjZsLTQuMjgzNzMzIDMuNDY0NTM0QTIzOC41NTc4NjcgMjM4LjU1Nzg2NyAwIDAgMCAyNzMuMDY2NjY3IDcxNi44YzAgMTMxLjk1OTQ2NyAxMDYuOTczODY3IDIzOC45MzMzMzMgMjM4LjkzMzMzMyAyMzguOTMzMzMzczIzOC45MzMzMzMtMTA2Ljk3Mzg2NyAyMzguOTMzMzMzLTIzOC45MzMzMzNsLTAuMDg1MzMzLTYuMTk1MmEyMzguNTQwOCAyMzguNTQwOCAwIDAgMC04Ni42NDc0NjctMTc4LjAwNTMzM2wtNC4zMDA4LTMuNDY0NTM0VjIxNi4xODM0NjdBMTQ3LjkxNjggMTQ3LjkxNjggMCAwIDAgNTEyIDY4LjI2NjY2N2wtNC40MzczMzMgMC4wNjgyNjZ6TTUxMiAxMzYuNTMzMzMzYTc5LjY1MDEzMyA3OS42NTAxMzMgMCAwIDEgNzkuNjUwMTMzIDc5LjY1MDEzNFY1NDYuNDc0NjY3YTM0LjEzMzMzMyAzNC4xMzMzMzMgMCAwIDAgMTUuMTM4MTM0IDI4LjM2NDhBMTcwLjQ0NDggMTcwLjQ0NDggMCAwIDEgNjgyLjY2NjY2NyA3MTYuOGMwIDk0LjI1OTItNzYuNDA3NDY3IDE3MC42NjY2NjctMTcwLjY2NjY2NyAxNzAuNjY2NjY3UzM0MS4zMzMzMzMgODExLjA1OTIgMzQxLjMzMzMzMyA3MTYuOGMwLTU3LjY4NTMzMyAyOC44MDg1MzMtMTEwLjQyMTMzMyA3NS44Nzg0LTE0MS45NDM0NjdhMzQuMTMzMzMzIDM0LjEzMzMzMyAwIDAgMCAxNS4xMzgxMzQtMjguMzY0OFYyMTYuMTgzNDY3QTc5LjY1MDEzMyA3OS42NTAxMzMgMCAwIDEgNTEyIDEzNi41MzMzMzN6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSI4MjkzIj48L3BhdGg+PHBhdGggZD0iTTQyNi42NjY2NjcgNjY1LjZhMzQuMTMzMzMzIDM0LjEzMzMzMyAwIDAgMSAzNC4xMzMzMzMgMzQuMzg5MzMzbDAuMDg1MzMzIDMuMDcyYTY0LjQ3Nzg2NyA2NC40Nzc4NjcgMCAwIDAgNjQuMzkyNTM0IDYxLjE0OTg2N3Y2OC4yNjY2NjdsLTQuMjE1NDY3LTAuMDY4MjY3QTEzMi43NDQ1MzMgMTMyLjc0NDUzMyAwIDAgMSAzOTIuNTMzMzMzIDY5OS43MzMzMzNsMC4wODUzMzQtMi41NkEzNC4xMzMzMzMgMzQuMTMzMzMzIDAgMCAxIDQyNi42NjY2NjcgNjY1LjZ6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSI4Mjk0Ij48L3BhdGg+PC9zdmc+" alt="">环境温度监测</p>
+                            <div id="temperatureSelect" class="inputSelect"></div>
+                        </div>
+                        <div><hr></div>
+                        <div class="data-body">
+                            <div id="temperature"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-fluid top-data-front-box">
+                    <div class="data-show-mainBorder data-show-border">
+                        <div class="data-head">
+                            <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjU1ODExMDU4ODk3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9Ijg3NzYiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTk1Ni42MSA0ODAuMzVsLTYzLjU0IDQuNTJBMzgyLjA5IDM4Mi4wOSAwIDAgMSAxMzEuODcgNTUxaDE3MS42MWw5MS45NC0xNDIuNThMNDY0LjE0IDcxNmwxNDctMjE0LjQxIDUwLjYgNDkuNDFINzk1di02OS4xN0g2ODkuODRsLTg5LjM0LTg3TDQ5NyA1NDUuODZsLTcwLjEzLTMxMy43OUwyNjUuOCA0ODEuODNIMTMxLjE3YTM4Ni4zNiAzODYuMzYgMCAwIDEgMTEuOTQtNjguNzNBMzgxLjggMzgxLjggMCAwIDEgODQ2IDMyNi43N2w1NS43LTMwLjljLTAuMDYtMC4xMi0wLjEzLTAuMjMtMC4xOS0wLjM0VjExNWgtNjkuMTN2ODcuMThhNDQ0LjkzIDQ0NC45MyAwIDEgMCAxMjQuMjMgMjc4LjE3eiIgcC1pZD0iODc3NyIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg==" alt="">产品使用寿命监测</p>
+                            <div id="lifeSelect" class="inputSelect"></div>
+                        </div>
+                        <div><hr></div>
+                        <div class="data-body">
+                            <div id="life"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 下方数据 -->
+    <div class="layui-row bottom-data"> 
+        <!-- 下1 -->
+        <div class="layui-col-sm12 layui-col-md6 bottom-data-box">
+            <div class="data-show-mainBorder data-show-border">
+                <div class="data-head">
+                    <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjU1ODExMTk2NzQzIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9Ijk4MTciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTg4NS4zMzMzMzMgMTI4SDI2Ni42NjY2NjdjLTE3LjcwNjY2NyAwLTMyIDE0LjI5MzMzMy0zMiAzMnYxMzguNjY2NjY3SDExNy4zMzMzMzNjLTE3LjcwNjY2NyAwLTMyIDE0LjI5MzMzMy0zMiAzMnY1MzMuMzMzMzMzYzAgMTcuNzA2NjY3IDE0LjI5MzMzMyAzMiAzMiAzMmg3NjhjMTcuNzA2NjY3IDAgMzItMTQuMjkzMzMzIDMyLTMydi03MDRjMC0xNy43MDY2NjctMTQuMjkzMzMzLTMyLTMyLTMyek0xNDkuMzMzMzMzIDM2Mi42NjY2NjdoODUuMzMzMzM0djQ2OS4zMzMzMzNoLTg1LjMzMzMzNFYzNjIuNjY2NjY3eiBtNzA0IDQ2OS4zMzMzMzNIMjk4LjY2NjY2N3YtNjQwaDU1NC42NjY2NjZ2NjQweiIgcC1pZD0iOTgxOCIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGQ9Ik02OTMuMzMzMzMzIDM2Mi42NjY2NjdINDE2YTMyIDMyIDAgMSAxIDAtNjRoMjc3LjMzMzMzM2EzMiAzMiAwIDEgMSAwIDY0ek02OTMuMzMzMzMzIDUzMy4zMzMzMzNINDE2YTMyIDMyIDAgMSAxIDAtNjRoMjc3LjMzMzMzM2EzMiAzMiAwIDEgMSAwIDY0ek02OTMuMzMzMzMzIDcyNS4zMzMzMzNINDE2YTMyIDMyIDAgMSAxIDAtNjRoMjc3LjMzMzMzM2EzMiAzMiAwIDEgMSAwIDY0eiIgcC1pZD0iOTgxOSIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg==" alt="">设备事件统计</p>
+                </div>
+                <div><hr></div>
+                <div class="data-body">
+                    <div id="eventCount"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 下2 -->
+        <div class="layui-col-sm12 layui-col-md6 bottom-data-box">
+            <div class="data-show-mainBorder data-show-border">
+                <div class="data-head">
+                    <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjU1ODExMjMwODYwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjEwNzA5IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik05MzguNjY2NjY3IDQ0OFYxOTIuMDQyNjY3QTQyLjY2NjY2NyA0Mi42NjY2NjcgMCAwIDAgODk2LjA0MjY2NyAxNDkuMzMzMzMzSDc2OHY0Mi42NjY2NjdsMTI4IDAuMDQyNjY3VjQwNS4zMzMzMzNIMTI4VjE5Mi4wNDI2NjdMMjU2IDE5MlYxNDkuMzMzMzMzSDEyNy45NTczMzNBNDIuNTYgNDIuNTYgMCAwIDAgODUuMzMzMzMzIDE5Mi4wNDI2Njd2NzAzLjkxNDY2NkE0Mi42NjY2NjcgNDIuNjY2NjY3IDAgMCAwIDEyNy45MzYgOTM4LjY2NjY2N0g0OTAuNjY2NjY3di00Mi42ODhsLTM2Mi42NjY2NjctMC4wMjEzMzRWNDQ4aDgxMC42NjY2Njd6TTI5OC42NjY2NjcgODUuMzMzMzMzaDQyLjY2NjY2NnYxNzAuNjY2NjY3aC00Mi42NjY2NjZWODUuMzMzMzMzeiBtMzg0IDBoNDIuNjY2NjY2djE3MC42NjY2NjdoLTQyLjY2NjY2NlY4NS4zMzMzMzN6TTM4NCAxNDkuMzMzMzMzaDI1NnY0Mi42NjY2NjdIMzg0VjE0OS4zMzMzMzN6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSIxMDcxMCI+PC9wYXRoPjxwYXRoIGQ9Ik03NDYuNjY2NjY3IDkxNy4zMzMzMzNhMTcwLjY2NjY2NyAxNzAuNjY2NjY3IDAgMSAwIDAtMzQxLjMzMzMzMyAxNzAuNjY2NjY3IDE3MC42NjY2NjcgMCAwIDAgMCAzNDEuMzMzMzMzeiBtMCA0Mi42NjY2NjdjLTExNy44MjQgMC0yMTMuMzMzMzMzLTk1LjUwOTMzMy0yMTMuMzMzMzM0LTIxMy4zMzMzMzNzOTUuNTA5MzMzLTIxMy4zMzMzMzMgMjEzLjMzMzMzNC0yMTMuMzMzMzM0IDIxMy4zMzMzMzMgOTUuNTA5MzMzIDIxMy4zMzMzMzMgMjEzLjMzMzMzNC05NS41MDkzMzMgMjEzLjMzMzMzMy0yMTMuMzMzMzMzIDIxMy4zMzMzMzN6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSIxMDcxMSI+PC9wYXRoPjxwYXRoIGQ9Ik03NjggNzU5LjIzMnYtMTE5LjI5NmMwLTExLjYwNTMzMy05LjU1NzMzMy0yMS4yNjkzMzMtMjEuMzMzMzMzLTIxLjI2OTMzMy0xMS44NjEzMzMgMC0yMS4zMzMzMzMgOS41MTQ2NjctMjEuMzMzMzM0IDIxLjI2OTMzM3YxMjguMTI4YTIwLjk5MiAyMC45OTIgMCAwIDAgNi4xMDEzMzQgMTQuOTMzMzMzbDYwLjYyOTMzMyA2MC42MjkzMzRhMjEuMTg0IDIxLjE4NCAwIDAgMCAzMC4wMTYtMC4xNDkzMzQgMjEuMzMzMzMzIDIxLjMzMzMzMyAwIDAgMCAwLjE0OTMzMy0zMC4wMTZMNzY4IDc1OS4yMzJ6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSIxMDcxMiI+PC9wYXRoPjwvc3ZnPg==" alt="">产品历史运行监测数据</p>
+                </div>
+                <div><hr></div>
+                <div class="data-body-table">
+                    <table class="layui-hide" id="historicalData"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/echarts.min.js"></script>
+<script src="./js/china.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./layui/layui.js"></script>
+<script src="./js/cmzInput.js"></script>
+<script src="./js/index.js"></script>
+</body>
+
+</html>
